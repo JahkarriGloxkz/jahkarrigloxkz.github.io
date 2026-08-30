@@ -20,8 +20,8 @@
 </main>
 <footer><div class="wrap">© 2026 YoungBagChaserᵀᴹ · YBC Shop</div></footer>
 <script>
-const roles=[['Your Own Key & Office',15],['Moderator',5],['Junior Moderator',9],['Head Moderator',21],['Elite Moderator',27],['EXECUTIVE',39],['Head Executive',45],['Community Director',51],['Server Commander',57],['Administrator',85],['Head Administrator',95],['Overseer',105],['Guardian',116],['YBC COMMANDER',125],['YBC OVERLORD',133],['DISCIPLINE',140],['El Rey',145],['YBC Council',155],['High Council',166],['YBC Elite Council',175],['YBC Supreme Council',185],['Right Hand',190],['La Cabra De Los YBC',195],['Arab Flame 🔥',200]].map(([name,price])=>({name,price}));
-const extras=[['Auto Responder',5],['Custom Role',5]].map(([name,price])=>({name,price})).sort((a,b)=>a.price-b.price);
+const roles=[['Moderator',5],['Junior Moderator',9],['Head Moderator',21],['Elite Moderator',27],['EXECUTIVE',39],['Head Executive',45],['Community Director',51],['Server Commander',57],['Administrator',85],['Head Administrator',95],['Overseer',105],['Guardian',116],['YBC COMMANDER',125],['YBC OVERLORD',133],['DISCIPLINE',140],['El Rey',145],['YBC Council',155],['High Council',166],['YBC Elite Council',175],['YBC Supreme Council',185],['Right Hand',190],['La Cabra De Los YBC',195],['Arab Flame 🔥',200]].map(([name,price])=>({name,price}));
+const extras=[['Auto Responder',5],['Custom Role',5],['Your Own Key & Office',15]].map(([name,price])=>({name,price})).sort((a,b)=>a.price-b.price);
 const allItems=[...roles,...extras].sort((a,b)=>a.price-b.price||a.name.localeCompare(b.name));
 const rolesGrid=document.getElementById('rolesGrid'),extrasGrid=document.getElementById('extrasGrid'),sel=document.getElementById('itemSelect'),user=document.getElementById('discordName'),notes=document.getElementById('notes');
 allItems.forEach(r=>{const o=document.createElement('option');o.value=r.name;o.textContent=`${r.name} — $${r.price}`;sel.appendChild(o)});
